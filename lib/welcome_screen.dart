@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
                 children: const [
                   Text("Welcome to Evento",
                       style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 35,
                           fontWeight: FontWeight.bold,
                           color: Colors.white)),
                   Text("Best Event Booking App",

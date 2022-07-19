@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SplashOne extends StatelessWidget {
-  const SplashOne({Key? key}) : super(key: key);
+class SplashTwo extends StatelessWidget {
+  const SplashTwo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SplashOne extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 35, right: 35),
                   child: Text(
-                    "Get Premium Big Event Tickets",
+                    "Get The Best Offer From Us",
                     style: TextStyle(
                       fontSize: 25,
                     ),
