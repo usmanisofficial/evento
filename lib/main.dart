@@ -6,6 +6,8 @@ import 'package:eventapp/utils/themes.dart';
 import 'package:eventapp/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.splashTwoRoute: (context) => const SplashTwo(),
         MyRoutes.splashThreeRoute: (context) => const SplashThree(),
         MyRoutes.welcomeScreenRoute: (context) => const WelcomeScreen(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
       },
       home: const WelcomeScreen(),
       debugShowCheckedModeBanner: false,

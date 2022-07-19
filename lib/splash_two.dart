@@ -1,3 +1,4 @@
+import 'package:eventapp/utils/route.dart';
 import 'package:flutter/material.dart';
 
 class SplashTwo extends StatelessWidget {
@@ -51,7 +52,10 @@ class SplashTwo extends StatelessWidget {
                         height: 50,
                         width: 200,
                         child: ElevatedButton(
-                          onPressed: () => {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, MyRoutes.splashThreeRoute);
+                          },
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color.fromRGBO(66, 176, 255, 1)),
