@@ -4,4 +4,5 @@ class MyRoutes {
   static const String splashTwoRoute = '/splashTwo';
   static const String splashThreeRoute = '/splashThree';
   static const String loginRoute = '/login';
+  static const String splashRoute = '/splash';
 }

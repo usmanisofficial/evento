@@ -5,9 +5,14 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Material(
-        child: Text("Login Page"),
+        child: Column(
+          children: const [
+            Text("Login Page"),
+            
+          ],
+        ),
       ),
     );
   }

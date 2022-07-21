@@ -1,3 +1,4 @@
+import 'package:eventapp/splash.dart';
 import 'package:eventapp/splash_one.dart';
 import 'package:eventapp/splash_three.dart';
 import 'package:eventapp/splash_two.dart';
@@ -27,8 +28,9 @@ class MyApp extends StatelessWidget {
         MyRoutes.splashThreeRoute: (context) => const SplashThree(),
         MyRoutes.welcomeScreenRoute: (context) => const WelcomeScreen(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.splashRoute: (context) => const Splash(),
       },
-      home: const WelcomeScreen(),
+      home: const Splash(),
       debugShowCheckedModeBanner: false,
     );
   }
