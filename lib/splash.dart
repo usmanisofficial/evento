@@ -1,4 +1,5 @@
 import 'package:eventapp/utils/route.dart';
+import 'package:eventapp/widgets/splash_dots.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -26,9 +27,9 @@ class _SplashState extends State<Splash> {
   };
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Material(
-        color: const Color.fromRGBO(66, 176, 255, 1),
+    return Material(
+      color: const Color.fromRGBO(66, 176, 255, 1),
+      child: SafeArea(
         child: Align(
           alignment: Alignment.bottomCenter,
           child: Container(
@@ -67,13 +68,13 @@ class _SplashState extends State<Splash> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsets.only(left: 35, right: 35, top: 35),
+                          const EdgeInsets.only(left: 35, right: 25, top: 35),
                       child: SizedBox(
                         height: 50,
                         width: 200,
                         child: ElevatedButton(
                           onPressed: () {
-                            if (counter < splashText.length-1) {
+                            if (counter < splashText.length - 1) {
                               setState(() {
                                 counter++;
                                 // ignore: avoid_print
@@ -104,39 +105,9 @@ class _SplashState extends State<Splash> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 40),
-                      child: Container(
-                        height: 11,
-                        width: 11,
-                        decoration: BoxDecoration(
-                          color: const Color.fromRGBO(66, 176, 255, 1),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 40),
-                      child: Container(
-                        height: 11,
-                        width: 11,
-                        decoration: BoxDecoration(
-                          color: const Color.fromRGBO(66, 176, 255, 1),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 40),
-                      child: Container(
-                        height: 11,
-                        width: 30,
-                        decoration: BoxDecoration(
-                          color: const Color.fromRGBO(66, 176, 255, 1),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    )
+                    const Dot(lengthofDot: 11),
+                    const Dot(lengthofDot: 11),
+                    const Dot(lengthofDot: 30),
                   ],
                 )
               ],
