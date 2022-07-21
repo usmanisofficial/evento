@@ -14,7 +14,7 @@ class _SplashState extends State<Splash> {
   var splashText = {
     0: [
       'Get Premium Big Event Tickets',
-      'All the best events from all world events'
+      'All the best events from all world events',
     ],
     1: [
       'Get The Best Offer From Us',
@@ -24,6 +24,11 @@ class _SplashState extends State<Splash> {
       'Evento  From Now On With Us',
       'All the best events from all world events'
     ]
+  };
+  var size = {
+    0: [30, 11, 11],
+    1: [11, 30, 11],
+    2: [11, 11, 30]
   };
   @override
   Widget build(BuildContext context) {
@@ -48,22 +53,8 @@ class _SplashState extends State<Splash> {
                 const SizedBox(
                   height: 70,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 35, right: 35),
-                  child: Text(
-                    splashText[counter]![0],
-                    style: const TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 35, right: 35, top: 35),
-                  child: Text(
-                    splashText[counter]![1],
-                    style: const TextStyle(fontSize: 14, color: Colors.grey),
-                  ),
-                ),
+                Heading(heading: splashText[counter]![0]),
+                SubTitle(subTitle: splashText[counter]![1]),
                 Row(
                   children: [
                     Padding(
@@ -77,8 +68,6 @@ class _SplashState extends State<Splash> {
                             if (counter < splashText.length - 1) {
                               setState(() {
                                 counter++;
-                                // ignore: avoid_print
-                                print(counter);
                               });
                             } else {
                               Navigator.pushNamed(context, MyRoutes.loginRoute);
@@ -105,15 +94,47 @@ class _SplashState extends State<Splash> {
                         ),
                       ),
                     ),
-                    const Dot(lengthofDot: 11),
-                    const Dot(lengthofDot: 11),
-                    const Dot(lengthofDot: 30),
+                    Dot(lengthofDot: size[counter]![0]),
+                    Dot(lengthofDot: size[counter]![1]),
+                    Dot(lengthofDot: size[counter]![2]),
                   ],
                 )
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Heading extends StatelessWidget {
+  final String heading;
+  const Heading({Key? key, required this.heading}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 35, right: 35),
+      child: Text(
+        heading,
+        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+      ),
+    );
+  }
+}
+
+class SubTitle extends StatelessWidget {
+  final String subTitle;
+  const SubTitle({Key? key, required this.subTitle}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 35, right: 35, top: 35),
+      child: Text(
+        subTitle,
+        style: const TextStyle(fontSize: 14, color: Colors.grey),
       ),
     );
   }
