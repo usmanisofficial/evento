@@ -11,7 +11,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Center(
           child: InkWell(
             onTap: (() {
-              Navigator.pushNamed(context, MyRoutes.splashOneRoute);
+              Navigator.pushNamed(context, MyRoutes.splashRoute);
             }),
             child: Container(
               color: const Color.fromRGBO(66, 176, 255, 1),
