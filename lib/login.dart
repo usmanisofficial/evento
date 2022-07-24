@@ -8,9 +8,30 @@ class LoginPage extends StatelessWidget {
     return SafeArea(
       child: Material(
         child: Column(
-          children: const [
-            Text("Login Page"),
-            
+          children: [
+            SafeArea(
+              child: Material(
+                child: Container(
+                  color: Colors.white,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height - 24,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 10, right: 20, left: 20, bottom: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Login Your Account",
+                          style: TextStyle(
+                              fontSize: 27, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyThemes.lightTheme(context),
       routes: {
-        // "/": (context) => LoginPage(),
+        // "/": (context) => const LoginPage(),
         MyRoutes.welcomeScreenRoute: (context) => const WelcomeScreen(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.splashRoute: (context) => const Splash(),
       },
-      home: const Splash(),
+      home: const WelcomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

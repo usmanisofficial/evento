@@ -19,15 +19,21 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                  Text("Welcome to Evento",
-                      style: TextStyle(
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
-                  Text("Best Event Booking App",
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 248, 248, 248))),
+                  Text(
+                    "Welcome to Evento",
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  Text(
+                    "Best Event Booking App",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 248, 248, 248),
+                    ),
+                  ),
+
                 ],
               ),
             ),
