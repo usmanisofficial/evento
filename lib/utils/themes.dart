@@ -15,5 +15,4 @@ class MyThemes {
         // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.lightBlue),
       );
   static Color creamColor = const Color(0xfff5f5f5);
-  static Color lightBlue = const Color.fromRGBO(66, 176, 255, 1);
 }
