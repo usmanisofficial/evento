@@ -17,7 +17,11 @@ class LoginPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height - 24,
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        top: 10, right: 20, left: 20, bottom: 10),
+                      top: 10,
+                      right: 20,
+                      left: 20,
+                      bottom: 10,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
