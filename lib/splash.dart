@@ -118,7 +118,10 @@ class Heading extends StatelessWidget {
       padding: const EdgeInsets.only(left: 35, right: 35),
       child: Text(
         heading,
-        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+        style: const TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w500,
+        ),
       ),
     );
   }
