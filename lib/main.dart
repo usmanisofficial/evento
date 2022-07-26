@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.splashRoute: (context) => const Splash(),
       },
-      home: const WelcomeScreen(),
+      home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }

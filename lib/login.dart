@@ -7,38 +7,42 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Material(
-        child: Column(
-          children: [
-            SafeArea(
-              child: Material(
-                child: Container(
-                  color: Colors.white,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height - 24,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 10,
-                      right: 20,
-                      left: 20,
-                      bottom: 10,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Login Your Account",
-                          style: TextStyle(
-                            fontSize: 27,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 10,
+            right: 20,
+            left: 20,
+            bottom: 10,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Login Your Account",
+                style: TextStyle(
+                  fontSize: 27,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
-            )
-          ],
+              TextFormField(
+                decoration: InputDecoration(
+                  enabledBorder: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  fillColor: Colors.grey[200],
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50)),
+                  prefixIcon: const Icon(
+                    Icons.email,
+                    color: Colors.grey,
+                  ),
+                  hintText: "Input Email",
+                  hintStyle: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
