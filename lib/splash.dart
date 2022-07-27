@@ -70,7 +70,7 @@ class _SplashState extends State<Splash> {
                                 counter++;
                               });
                             } else {
-                              Navigator.pushNamed(context, MyRoutes.loginRoute);
+                              Navigator.pushNamed(context, MyRoutes.logInRoute);
                             }
                           },
                           style: ButtonStyle(
