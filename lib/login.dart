@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                 children: [
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -70,7 +70,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -100,7 +100,7 @@ class LoginPage extends StatelessWidget {
                         contentPadding: EdgeInsets.fromLTRB(40, p, p, p)),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   TextButton(
                     onPressed: () {},
@@ -109,27 +109,68 @@ class LoginPage extends StatelessWidget {
                       child: Text(
                         "Forgot Password?",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 146, 146, 146),
                         ),
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                        minimumSize: MaterialStateProperty.all(
-                          const Size(double.infinity, 50),
+                      elevation: MaterialStateProperty.all(0),
+                      minimumSize: MaterialStateProperty.all(
+                        const Size(double.infinity, 60),
+                      ),
+                      fixedSize: MaterialStateProperty.all(
+                          Size.fromWidth(MediaQuery.of(context).size.width)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                        fixedSize: MaterialStateProperty.all(
-                            Size.fromWidth(MediaQuery.of(context).size.width)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ))),
-                    child: const Text("Login"),
+                      ),
+                    ),
+                    child: const Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      elevation: MaterialStateProperty.all(0),
+                      backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(255, 236, 236, 236),
+                      ),
+                      minimumSize: MaterialStateProperty.all(
+                        const Size(double.infinity, 60),
+                      ),
+                      fixedSize: MaterialStateProperty.all(
+                          Size.fromWidth(MediaQuery.of(context).size.width)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                    ),
+                    child: const Text(
+                      "Create Account",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromARGB(255, 175, 175, 175),
+                      ),
+                    ),
                   ),
                 ],
               ))
